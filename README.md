@@ -1,6 +1,12 @@
-# CafeSaaS — Codex Ready (v2025-09R5)
-- مضاف فولدر **ops/**: labels.json + sprints.json
-- Workflow **bootstrap.yml** يولّد Labels + Milestones تلقائي على GitHub عند Push
-- إدي الريبو Push → هيتعملك Labels & Sprints أوتوماتيك.
+# CafeSaaS — Codex AutoOps (v2025-09R6)
+- مضاف `ops/` فيه Labels + Sprints متولّدين من لستة الموديولات.
+- ملف `app/Console/Commands/GenerateOps.py` يولّد سبرنتات جديدة أو يعدّلها بسهولة.
+- Workflow `bootstrap.yml` يـSync Labels + Milestones أوتوماتيك في GitHub.
 
-تاريخ التوليد: 2025-09-08
+## استخدام Generator
+```bash
+python3 app/Console/Commands/GenerateOps.py > ops/sprints.json
+git add ops/sprints.json
+git commit -m "update sprints"
+git push
+```
