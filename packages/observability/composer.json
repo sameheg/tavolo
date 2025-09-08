@@ -1,0 +1,9 @@
+{
+  "name": "cafesaas/observability",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "CafeSaaS\\Observability\\": "src/"
+    }
+  }
+}

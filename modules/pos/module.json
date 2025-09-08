@@ -1,0 +1,18 @@
+{
+  "name": "POS",
+  "slug": "pos",
+  "version": "1.0.0",
+  "providers": [
+    "CafeSaaS\\POS\\Infrastructure\\POSServiceProvider"
+  ],
+  "routes": [
+    "api"
+  ],
+  "permissions": [
+    "pos.view",
+    "pos.order.create",
+    "pos.refund"
+  ],
+  "depends_on": [],
+  "migrations": []
+}

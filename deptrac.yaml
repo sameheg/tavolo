@@ -1,0 +1,35 @@
+deptrac:
+  paths:
+    - app
+    - modules
+    - packages
+  layers:
+    - name: Domain
+      collectors:
+        - type: directory
+          value: modules/.*/Domain/.*
+    - name: Application
+      collectors:
+        - type: directory
+          value: modules/.*/Application/.*
+    - name: Infrastructure
+      collectors:
+        - type: directory
+          value: modules/.*/Infrastructure/.*
+    - name: Laravel
+      collectors:
+        - type: directory
+          value: app/.*
+  ruleset:
+    Domain:
+      - Domain
+    Application:
+      - Domain
+      - Application
+    Infrastructure:
+      - Domain
+      - Application
+      - Infrastructure
+    Laravel:
+      - Application
+      - Infrastructure

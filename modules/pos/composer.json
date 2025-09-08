@@ -1,0 +1,16 @@
+{
+  "name": "cafesaas/pos",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "CafeSaaS\\POS\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "CafeSaaS\\POS\\Infrastructure\\POSServiceProvider"
+      ]
+    }
+  }
+}

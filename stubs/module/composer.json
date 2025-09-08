@@ -1,0 +1,16 @@
+{
+  "name": "cafesaas/{{module}}",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "{{namespace}}\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "{{namespace}}\\Infrastructure\\{{Module}}ServiceProvider"
+      ]
+    }
+  }
+}
