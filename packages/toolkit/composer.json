@@ -1,9 +1,0 @@
-{
-  "name": "cafesaas/toolkit",
-  "type": "library",
-  "autoload": {
-    "psr-4": {
-      "CafeSaaS\\Toolkit\\": "src/"
-    }
-  }
-}
