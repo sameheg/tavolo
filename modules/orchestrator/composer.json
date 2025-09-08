@@ -1,0 +1,6 @@
+{
+  "name": "cafesaas/orchestrator",
+  "type": "library",
+  "autoload": {"psr-4": {"CafeSaaS\\Orchestrator\\": "src/"}},
+  "extra": {"laravel": {"providers": ["CafeSaaS\\Orchestrator\\Infrastructure\\OrchestratorServiceProvider"]}}
+}

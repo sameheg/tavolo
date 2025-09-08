@@ -1,0 +1,10 @@
+{
+  "name": "Notifications",
+  "slug": "notifications",
+  "version": "1.0.0",
+  "providers": ["CafeSaaS\Notifications\Infrastructure\NotificationsServiceProvider"],
+  "routes": ["api"],
+  "permissions": ["notifications.view"],
+  "depends_on": [],
+  "migrations": []
+}

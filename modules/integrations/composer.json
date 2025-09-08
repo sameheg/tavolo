@@ -1,0 +1,6 @@
+{
+  "name": "cafesaas/integrations",
+  "type": "library",
+  "autoload": {"psr-4": {"CafeSaaS\\Integrations\\": "src/"}},
+  "extra": {"laravel": {"providers": ["CafeSaaS\\Integrations\\Infrastructure\\IntegrationsServiceProvider"]}}
+}

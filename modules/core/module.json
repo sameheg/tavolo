@@ -1,0 +1,10 @@
+{
+  "name": "Core",
+  "slug": "core",
+  "version": "1.0.0",
+  "providers": ["CafeSaaS\Core\Infrastructure\CoreServiceProvider"],
+  "routes": ["api"],
+  "permissions": ["core.view"],
+  "depends_on": [],
+  "migrations": []
+}

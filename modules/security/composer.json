@@ -1,0 +1,6 @@
+{
+  "name": "cafesaas/security",
+  "type": "library",
+  "autoload": {"psr-4": {"CafeSaaS\\Security\\": "src/"}},
+  "extra": {"laravel": {"providers": ["CafeSaaS\\Security\\Infrastructure\\SecurityServiceProvider"]}}
+}
