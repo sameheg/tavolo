@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Sprint 0 \u2014 Setup & Infra",
+    "due_on": "2025-09-15T00:00:00Z",
+    "description": "DevOps, CI/CD, Auth, Registry"
+  },
+  {
+    "title": "Sprint 1 \u2014 Core + SaaS + UI",
+    "due_on": "2025-09-30T00:00:00Z",
+    "description": "Core modules + SuperAdmin"
+  },
+  {
+    "title": "Sprint 2 \u2014 Catalog & Inventory",
+    "due_on": "2025-10-15T00:00:00Z",
+    "description": "Products, Recipes, Stock"
+  }
+]
