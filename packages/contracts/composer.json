@@ -1,0 +1,9 @@
+{
+  "name": "cafesaas/contracts",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "CafeSaaS\\Contracts\\": "src/"
+    }
+  }
+}

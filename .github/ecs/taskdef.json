@@ -1,0 +1,16 @@
+{
+  "family": "cafesaas-api",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "containerDefinitions": [{
+    "name": "api",
+    "image": "{{IMAGE}}",
+    "essential": true,
+    "portMappings": [{ "containerPort": 8000, "hostPort": 8000 }],
+    "environment": [
+      { "name": "APP_ENV", "value": "staging" }
+    ]
+  }]
+}

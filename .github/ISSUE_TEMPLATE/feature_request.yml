@@ -1,0 +1,11 @@
+name: Feature request
+description: Suggest an idea
+labels: [enhancement]
+body:
+  - type: textarea
+    id: value
+    attributes:
+      label: Business value
+      description: Why this matters?
+    validations:
+      required: true

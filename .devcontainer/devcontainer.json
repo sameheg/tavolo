@@ -1,0 +1,39 @@
+{
+  "name": "CafeSaaS Dev",
+  "dockerComposeFile": [
+    "../docker-compose.dev.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "postCreateCommand": "composer install && php artisan key:generate || true",
+  "postStartCommand": "php artisan cafesaas:install || true",
+  "forwardPorts": [
+    8000,
+    8025,
+    7700,
+    9000,
+    9001
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "onecentlin.laravel-blade",
+        "amiralizadeh9480.laravel-extra-intellisense",
+        "shufo.vscode-blade-formatter",
+        "xdebug.php-debug",
+        "mikestead.dotenv",
+        "esbenp.prettier-vscode",
+        "editorconfig.editorconfig"
+      ],
+      "settings": {
+        "intelephense.environment.phpVersion": "8.3"
+      }
+    }
+  }
+}
