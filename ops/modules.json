@@ -1,0 +1,264 @@
+[
+  {
+    "slug": "core",
+    "title": "Core Platform",
+    "labels": [
+      "epic",
+      "module"
+    ]
+  },
+  {
+    "slug": "security",
+    "title": "Security",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "super-admin",
+    "title": "Super Admin",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "orchestrator",
+    "title": "Orchestrator",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "integrations",
+    "title": "Integrations",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "notifications",
+    "title": "Notifications",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "catalog",
+    "title": "Catalog",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "pricing",
+    "title": "Pricing",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "inventory",
+    "title": "Inventory",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "supply-chain",
+    "title": "Supply Chain",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "pos",
+    "title": "POS",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "kds",
+    "title": "KDS",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "table",
+    "title": "Table Management",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "online-ordering",
+    "title": "Online Ordering",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "crm",
+    "title": "CRM & Loyalty",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "billing",
+    "title": "Billing",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "compliance",
+    "title": "Compliance",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "reporting",
+    "title": "Reporting",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "employee",
+    "title": "Employee",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "recruitment",
+    "title": "Recruitment",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "marketplace",
+    "title": "Marketplace",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "leasing",
+    "title": "Leasing",
+    "labels": [
+      "module"
+    ]
+  },
+  {
+    "slug": "hq",
+    "title": "HQ / Franchise Suite",
+    "labels": [
+      "enhancement",
+      "epic"
+    ]
+  },
+  {
+    "slug": "cdp",
+    "title": "CDP / Growth Hub",
+    "labels": [
+      "enhancement",
+      "epic"
+    ]
+  },
+  {
+    "slug": "experimentation",
+    "title": "Experimentation / A/B Studio",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "ai-menu",
+    "title": "AI Menu IQ & Demand Forecasting",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "workforce",
+    "title": "Workforce Optimizer",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "sops",
+    "title": "Task & SOPs Engine",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "gift",
+    "title": "Gift & Stored Value",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "payops",
+    "title": "Payments Ops & Reconciliation",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "delivery-hub",
+    "title": "Delivery Hub",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "iot",
+    "title": "IoT / Device Telemetry",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "lms",
+    "title": "Learning / Micro\u2011LMS",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "esg",
+    "title": "ESG & Sustainability",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "copilot",
+    "title": "Admin Copilot (Natural Language Ops)",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "data-platform",
+    "title": "Data Platform (Lake + Metrics Layer)",
+    "labels": [
+      "enhancement"
+    ]
+  },
+  {
+    "slug": "grc",
+    "title": "GRC / Risk Center",
+    "labels": [
+      "enhancement"
+    ]
+  }
+]

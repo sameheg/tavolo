@@ -1,0 +1,54 @@
+name: Codex Backlog (Modules → Issues)
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'ops/modules.json' ]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  issues: write
+jobs:
+  backlog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Issues from modules.json
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const modules = JSON.parse(fs.readFileSync(`${process.env.GITHUB_WORKSPACE}/ops/modules.json`, 'utf8'));
+            const sprints = JSON.parse(fs.readFileSync(`${process.env.GITHUB_WORKSPACE}/ops/sprints.json`, 'utf8'));
+            const sprintTitle = sprints[0]?.title || 'Sprint — Full Delivery 24h';
+            const milestones = await github.rest.issues.listMilestones({owner, repo, state:'open'});
+            const sprintMs = milestones.data.find(m => m.title === sprintTitle);
+            let milestone_number = sprintMs ? sprintMs.number : undefined;
+            if (!milestone_number) {
+              const m = await github.rest.issues.createMilestone({owner, repo, title: sprintTitle});
+              milestone_number = m.data.number;
+            }
+            // Fetch existing issues to avoid duplicates
+            const existing = await github.paginate(github.rest.issues.listForRepo, {owner, repo, state:'all', per_page:100});
+            const existingTitles = new Set(existing.map(i => i.title));
+            for (const mod of modules) {
+              const title = `[Module] ${mod.title}`;
+              if (existingTitles.has(title)) {
+                core.info(`Skip existing: ${title}`);
+                continue;
+              }
+              const body = [
+                `**Module:** ${mod.title}`,
+                `**Slug:** \`${mod.slug}\``,
+                ``,
+                `- اقرأ المواصفات: \`docs/STACK.md\` (ابحث عن العنوان المطابق).`,
+                `- التسليم: provider + routes + migrations + Domain/Application/Infra + Flags + OpenAPI + Admin pages + Events/Outbox + Acceptance.`
+              ].join('\n');
+              await github.rest.issues.create({
+                owner, repo, title, body,
+                milestone: milestone_number,
+                labels: mod.labels || ['module']
+              });
+              core.info('Created: ' + title);
+            }

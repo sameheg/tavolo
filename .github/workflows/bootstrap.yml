@@ -1,0 +1,42 @@
+name: Codex Bootstrap
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'ops/labels.json', 'ops/sprints.json' ]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  issues: write
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync Labels & Milestone (24h)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            // Labels
+            const labels = JSON.parse(fs.readFileSync(`${process.env.GITHUB_WORKSPACE}/ops/labels.json`, 'utf8'));
+            for (const l of labels) {
+              try {
+                await github.rest.issues.updateLabel({owner, repo, name: l.name, color: l.color, description: l.description});
+              } catch {
+                await github.rest.issues.createLabel({owner, repo, name: l.name, color: l.color, description: l.description});
+              }
+            }
+            // Single sprint/milestone (no due date)
+            const sprints = JSON.parse(fs.readFileSync(`${process.env.GITHUB_WORKSPACE}/ops/sprints.json`, 'utf8'));
+            const s = sprints[0];
+            const ms = await github.rest.issues.listMilestones({owner, repo, state:'open'});
+            const exists = ms.data.find(m => m.title === s.title);
+            if (!exists) {
+              let payload = {owner, repo, title: s.title, description: s.description || ''};
+              await github.rest.issues.createMilestone(payload);
+              core.info('Milestone created: ' + s.title);
+            } else {
+              core.info('Milestone exists: ' + s.title);
+            }
