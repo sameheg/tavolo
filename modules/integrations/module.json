@@ -1,0 +1,10 @@
+{
+  "name": "Integrations",
+  "slug": "integrations",
+  "version": "1.0.0",
+  "providers": ["CafeSaaS\Integrations\Infrastructure\IntegrationsServiceProvider"],
+  "routes": ["api"],
+  "permissions": ["integrations.view"],
+  "depends_on": [],
+  "migrations": []
+}

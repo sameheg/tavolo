@@ -1,0 +1,10 @@
+{
+  "name": "SuperAdmin",
+  "slug": "super-admin",
+  "version": "1.0.0",
+  "providers": ["CafeSaaS\SuperAdmin\Infrastructure\SuperAdminServiceProvider"],
+  "routes": ["api"],
+  "permissions": ["super-admin.view"],
+  "depends_on": [],
+  "migrations": []
+}

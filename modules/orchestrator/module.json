@@ -1,0 +1,10 @@
+{
+  "name": "Orchestrator",
+  "slug": "orchestrator",
+  "version": "1.0.0",
+  "providers": ["CafeSaaS\Orchestrator\Infrastructure\OrchestratorServiceProvider"],
+  "routes": ["api"],
+  "permissions": ["orchestrator.view"],
+  "depends_on": [],
+  "migrations": []
+}

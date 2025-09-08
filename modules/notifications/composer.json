@@ -1,0 +1,6 @@
+{
+  "name": "cafesaas/notifications",
+  "type": "library",
+  "autoload": {"psr-4": {"CafeSaaS\\Notifications\\": "src/"}},
+  "extra": {"laravel": {"providers": ["CafeSaaS\\Notifications\\Infrastructure\\NotificationsServiceProvider"]}}
+}

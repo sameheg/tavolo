@@ -1,0 +1,10 @@
+{
+  "name": "Security",
+  "slug": "security",
+  "version": "1.0.0",
+  "providers": ["CafeSaaS\Security\Infrastructure\SecurityServiceProvider"],
+  "routes": ["api"],
+  "permissions": ["security.view"],
+  "depends_on": [],
+  "migrations": []
+}

@@ -1,0 +1,6 @@
+{
+  "name": "cafesaas/super-admin",
+  "type": "library",
+  "autoload": {"psr-4": {"CafeSaaS\\SuperAdmin\\": "src/"}},
+  "extra": {"laravel": {"providers": ["CafeSaaS\\SuperAdmin\\Infrastructure\\SuperAdminServiceProvider"]}}
+}
